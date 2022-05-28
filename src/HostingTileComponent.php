@@ -22,7 +22,7 @@ class HostingTileComponent extends Component
 
         return view('dashboard-hosting-tile::tile', [
             'website' => config('dashboard.tiles.hosting.url'),
-            'server' => $hostingStore->getData()['server'],
+            'server' => $hostingStore->getData(),
         ]);
     }
 }
