@@ -10,7 +10,7 @@
         <h1 class="font-medium text-dimmed text-sm uppercase tracking-wide tabular-nums text-center">Server</h1>
         <p class="font-small text-dimmed text-xs lowercase tracking-wide tabular-nums text-center pb-2">{{ $website }}</p>
 
-        <ul class="mt-auto mb-auto overflow-y-scroll">
+        <ul class="mt-auto mb-auto">
           <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">Hoster</span>
