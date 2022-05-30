@@ -3,6 +3,8 @@
 namespace Quarterloop\HostingTile;
 
 use Spatie\Dashboard\Models\Tile;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class HostingStore
 {
