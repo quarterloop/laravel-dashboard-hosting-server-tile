@@ -11,19 +11,19 @@
         <p class="font-small text-dimmed text-xs lowercase tracking-wide tabular-nums text-center pb-2">{{ $website }}</p>
 
         <ul class="mt-auto mb-auto overflow-y-scroll">
-          <li class="p-1 overflow-y-auto">
+          <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">Hoster</span>
               <span class="pl-1 font-small text-xs ml-auto">{{ $anbieter }}</span>
             </div>
           </li>
-          <li class="p-1 overflow-y-auto">
+          <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">IP-Adresse</span>
               <span class="pl-1 font-small text-xs ml-auto">{{ $ip }}</span>
             </div>
           </li>
-          <li class="p-1 overflow-y-auto">
+          <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">Server (intern)</span>
               <span class="pl-1 font-small text-xs ml-auto">{{ $serverName }}</span>
