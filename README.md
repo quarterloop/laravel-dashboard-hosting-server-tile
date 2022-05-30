@@ -10,16 +10,16 @@ This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-
 You can install the package via composer:
 
 ```bash
-composer require quaterloop/laravel-dashboard-google-page-speed-tile
+composer require quaterloop/laravel-hosting-server-tile
 ```
 
 ## Usage
 
-In your dashboard view you use the `livewire:google-page-speed-tile` component.
+In your dashboard view you use the `livewire:hosting-tile` component.
 
 ```html
 <x-dashboard>
-    <livewire:google-page-speed-tile position="e7:e16" />
+    <livewire:hosting-tile position="a1:a1" />
 </x-dashboard>
 ```
 
@@ -27,12 +27,12 @@ In your dashboard view you use the `livewire:google-page-speed-tile` component.
 Use the php artisan command to fetch Page Speed data.
 
 ``` bash
-php artisan dashboard:fetch-google-page-speed-data
+php artisan dashboard:fetch-hosting-data
 ```
 
 Use this snippet to schedule the command in app/Console/Commands/Kernel.php
 ``` bash
-$schedule->command(\Quaterloop\GooglePageSpeedTile\Commands\FetchGooglePageSpeedCommand::class)->everyMinute();
+$schedule->command(\Quaterloop\HostingTile\Commands\FetchHostingCommand::class)->daily();
 ```
 
 ## Testing
