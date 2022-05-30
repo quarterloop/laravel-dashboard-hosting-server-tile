@@ -4,7 +4,7 @@ namespace Quarterloop\HostingTile\Services;
 
 use Illuminate\Support\Facades\Http;
 
-class TechStackAPI
+class HostingAPI
 {
   public static function getHosting(string $url): array
   {
