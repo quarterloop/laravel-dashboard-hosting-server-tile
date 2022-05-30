@@ -14,19 +14,19 @@
           <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">Hoster</span>
-              <span class="pl-1 font-small text-xs ml-auto">{{ $anbieter }}</span>
+              <span class="pr-1 font-small text-xs ml-auto">{{ $anbieter }}</span>
             </div>
           </li>
           <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">IP-Adresse</span>
-              <span class="pl-1 font-small text-xs ml-auto">{{ $ip }}</span>
+              <span class="pr-1 font-small text-xs ml-auto">{{ $ip }}</span>
             </div>
           </li>
           <li class="">
             <div class="flex justify-center">
               <span class="pl-1 font-small text-xs mr-auto">Server (intern)</span>
-              <span class="pl-1 font-small text-xs ml-auto">{{ $serverName }}</span>
+              <span class="pr-1 font-small text-xs ml-auto">{{ $serverName }}</span>
             </div>
           </li>
         </ul>
