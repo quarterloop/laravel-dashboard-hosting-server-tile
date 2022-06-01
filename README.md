@@ -10,7 +10,7 @@ This tile can be used on [the Laravel Dashboard](https://docs.spatie.be/laravel-
 You can install the package via composer:
 
 ```bash
-composer require quaterloop/laravel-hosting-server-tile
+composer require quarterloop/laravel-hosting-server-tile
 ```
 
 ## Usage
@@ -25,15 +25,31 @@ In your dashboard view you use the `livewire:hosting-tile` component.
 
 
 Use the php artisan command to fetch Page Speed data.
-
 ``` bash
 php artisan dashboard:fetch-hosting-data
 ```
 
+
 Use this snippet to schedule the command in app/Console/Commands/Kernel.php
 ``` bash
-$schedule->command(\Quaterloop\HostingTile\Commands\FetchHostingCommand::class)->daily();
+$schedule->command(\Quarterloop\HostingTile\Commands\FetchHostingCommand::class)->daily();
 ```
+
+
+Also add the following code snippet in app/console/kernel.php under "$commands" in a new line:
+``` bash
+\Quarterloop\HostingTile\Commands\FetchHostingCommand::class,
+```
+
+
+Insert this in routes/web.php - this enables the manual-refresh-button in tile
+``` bash
+Route::get('/refresh-hosting', function() {
+  Artisan::call('dashboard:fetch-hosting-data');
+  return back();
+})->name('fetch-hosting');
+```
+
 
 ## Testing
 
