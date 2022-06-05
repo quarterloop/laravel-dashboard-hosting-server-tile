@@ -5,6 +5,7 @@ namespace Quarterloop\HostingTile\Commands;
 use Illuminate\Console\Command;
 use Quarterloop\HostingTile\Services\HostingAPI;
 use Quarterloop\HostingTile\HostingStore;
+use Session;
 
 class FetchHostingCommand extends Command
 {
@@ -18,7 +19,7 @@ class FetchHostingCommand extends Command
         $this->info('Fetching hosting data ...');
 
         $hosting = $hosting_api::getHosting(
-            config('dashboard.tiles.hosting.url'),
+            Session::get('website'),
         );
 
         HostingStore::make()->setData($hosting);
